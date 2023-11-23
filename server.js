@@ -29,8 +29,8 @@ app.post("/generate-meal-plan", async (req, res) => {
       primaryObjective,
     } = req.body;
 
-    const customPrompt = `Based on the calculated TDEE and the primary objective of ${primaryObjective}, create a specific 7-day meal plan, varying each day. Please consider the following dietary preferences: preferred foods are ${preferredFoods}, disliked foods are ${dislikedFoods}, and allergies include ${allergies}. The plan should be for ${mealsPerDay} meals per day.`;
-    const tdee = `Calculate the TDEE for a ${gender}, ${age} years old, with a height of ${height} cm, weight of ${weight} kg, and an activity level of ${activityLevel}/5.`;
+    const tdee = `Calculate the TDEE for a ${gender}, ${age} years old, with a height of ${height} cm, weight of ${weight} kg, and an activity level of ${activityLevel}/5. Do not show all the details of the calculations of tdee and bmr. Just show the result`;
+    const customPrompt = `Based on the calculated TDEE lets calculate the objectiuve caloric intake and the primary objective of ${primaryObjective}. Based on both create a specific 7-day meal plan, varying each day. Every meal should have all the ingredients in grams. and the macro split. Please consider the following dietary preferences: preferred foods are ${preferredFoods}, disliked foods are ${dislikedFoods}, and allergies include ${allergies}. The plan should be for ${mealsPerDay} meals per day.`;
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
