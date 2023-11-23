@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Meal Plan Generator</title>
+    <script type="module" src="stream-response.js"></script>
+</head>
+<body style="background-image: url('GettyImages-1301412050 copy.jpg')" class="bg-white text-black min-h-screen flex items-center justify-center">
+  <div class="lg:w-2/3 2xl:w-1/2 p-8 rounded-md bg-gray-100"> <!-- Increased width -->
+    <h1 class="text-3xl font-bold mb-6 text-center">Get Dietary Plan</h1>
+        
+    <form id="userDetailsForm" class="mb-4 space-y-4 rounded-md"> <!-- Added space-y-4 for vertical spacing -->
+          <select id="gender" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+          </select>
+          <input type="number" id="age" placeholder="Age" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <input type="number" id="height" placeholder="Height in cm" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <input type="number" id="weight" placeholder="Weight in kg" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <input type="text" id="activityLevel" placeholder="Activity Level Out Of 5" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <select id="primaryObjective" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+            <option value="">Select Primary Objective</option>
+            <option value="lose_fat">Lose Fat</option>
+            <option value="gain_muscle">Gain Muscle</option>
+            <option value="maintain_weight">Maintain Weight</option>
+          </select>
+          <input type="text" id="allergies" placeholder="Allergies" class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <input type="text" id="preferredFoods" placeholder="Preferred Foods" class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <input type="text" id="dislikedFoods" placeholder="Disliked Foods" class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <input type="number" id="mealsPerDay" placeholder="Meals Per Day" required class="input-field w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+          <button type="submit" class="w-full px-4 py-2 rounded-md bg-black text-white hover:bg-gray-700 focus:outline-none">Generate Meal Plan</button>
+        </form>
+
+        <div id="resultContainer" class="mt-4 h-48 overflow-y-auto">
+            <p class="text-gray-500 text-sm mb-2">Generated Text</p>
+            <p id="resultText" class="whitespace-pre-line"></p>
+        </div>
+
+        
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
