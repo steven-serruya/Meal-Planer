@@ -44,6 +44,18 @@ Open `http://localhost:8000` in your browser to use the application.
 2. Click the "Generate Meal Plan" button.
 3. View the generated meal plan in the results section.
 
+## Screenshots
+
+![User form to get meal plan](<public/screenshots/Screenshot 2023-11-23 at 19.32.28.png>)
+
+![Filled up form](<public/screenshots/Screenshot 2023-11-23 at 19.32.58.png>)
+
+![THe app gives you your TDEE and objective caloric intake](<public/screenshots/Screenshot 2023-11-23 at 19.33.32.png>)
+
+![Meal example for day 1](<public/screenshots/Screenshot 2023-11-23 at 19.33.45.png>)
+
+![Meal example for day 2](<public/screenshots/Screenshot 2023-11-23 at 19.34.01.png>)
+
 ## Contribution
 
 Contributions to this project are welcome. To contribute:
